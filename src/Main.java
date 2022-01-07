@@ -15,15 +15,16 @@ public class Main {
         */
 
         Prostokąt prostokąt = new Prostokąt();
-        System.out.println("Pole prostokąta: " +prostokąt.pole(10,10));
-        System.out.println("Obwód prostokąta: " + prostokąt.obwod(10,10));
+        System.out.println("Pole : " +prostokąt.pole(10,10));
+        System.out.println("Obwód : " + prostokąt.obwod(10,10));
+        prostokąt.nazwaFigury("Prostokąt");
 
         Kwadrat kwadrat = new Kwadrat();
-        System.out.println("Pole kwadratu: " + kwadrat.pole(50,10));
-        System.out.println("Obwód kwadratu: " + kwadrat.obwod(50,10));
+        System.out.println("Pole : " + kwadrat.pole(50,10));
+        System.out.println("Obwód : " + kwadrat.obwod(50,10));
+        kwadrat.nazwaFigury("Kwadrat");
 
-        kwadrat.wiadomosc();
-        prostokąt.wiadomosc();
+
 
     }
 }

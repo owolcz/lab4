@@ -1,4 +1,7 @@
 public class Prostokąt extends Figura {
+
+
+
     @Override
     double pole(double x, double y) {
         return x * y;
@@ -8,4 +11,9 @@ public class Prostokąt extends Figura {
     double obwod(double x, double y) {
         return x + y;
     }
+
+
+
 }
+
+
