@@ -1,3 +1,12 @@
+import classes.Kierownik;
+import classes.Ludzie;
+import classes.Pracownik;
+import classes.Student;
+import interfaces.Pracownik1;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +34,9 @@ public class Main {
         b) stworzyć 2 objekty typu Pracownik i uzupełnić wszystkie pola
         c) wypisać metody toString() wszystkich objektów
 
+
+
+
         zad.4 - Dla chętnych
         a) stworzyć klasę Kierownik która będzie implementować interfejs PracownikI,
         b) zaimplementować wszystkie metody, i stworzyć pola
@@ -38,5 +50,39 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
+
+        System.out.println("Zadanie  3)");
+        Student student1 = new Student(80, "Oskar", "Gdynia", 62642, 2);
+        System.out.println(student1.toString());
+
+        Student student2 = new Student(100, "Marek", "Gdańsk", 12123, 4);
+        System.out.println(student2.toString());
+
+        Pracownik pracownik1 = new Pracownik(80, "Jan", "Informatyk", 22, 12300);
+        System.out.println(pracownik1.toString());
+
+        Pracownik pracownik2 = new Pracownik(100, "Tomasz", "Stolarz", 23, 100000);
+        System.out.println(pracownik2.toString());
+
+        Kierownik kierownik1 = new Kierownik(80, "Krzysztof", "Kierownik", 41, 112300);
+
+
+        Kierownik kierownik2 = new Kierownik(100, "Wojtek", "Kierownik", 52, 1100000);
+
+        System.out.println("Zadanie  4)");
+        List<Pracownik1> listaPracownikow = new ArrayList<>();
+        listaPracownikow.add(pracownik1);
+        listaPracownikow.add(pracownik2);
+        listaPracownikow.add(kierownik1);
+        listaPracownikow.add(kierownik2);
+        System.out.println(listaPracownikow.toString());
+
+
+        System.out.println("Zadanie  5)");
+        Ludzie czlowiek = new Ludzie(150, "Krzysztof", "Sopot", 1231, 3,
+                "Malarz", 22, 5789);
+        System.out.println(czlowiek.toString());
+
+
     }
 }
