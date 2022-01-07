@@ -38,16 +38,20 @@ public class Main {
 //            throw e;
 //        }
 //
-//        if(index<1 && index >=0) {
-//            try {
-//                System.out.println(tab[index]);
-//            } catch (ArrayIndexOutOfBoundsException e) {
-//                System.out.println("Błąd Podałeś index: " + index + ", dozwolone są od - do " + (tab.length - 1));
-//                throw e;
-//            } finally {
-//                System.out.println("Koniec programu");
-//            }
-//        }
+        int[] tablica = {10, 20, 30, 40, 50};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Który element tablicy wyświetlić?");
+        int index = sc.nextInt();
+        sc.close();
+        try {
+            System.out.println(tablica[index]);
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.err.println("Podałeś indeks wykraczający poza rozmiar tablicy!");
+        }
+
+
+
 
 
 
