@@ -23,32 +23,30 @@ public class Main {
         */
 
 //        Zad.1
-//        String tab[] = {"Audi", "BMW", "Mercedes", "Lexus", "Porshe", "McLaren"};
-//        Scanner scan= new Scanner(System.in);
-//        int index = -1;
-//
-//
-//
-//        System.out.println("Podaj indeks tablicy [0-5], który ma być wyświetlony: ");
-//
-//        try{
-//            index = Integer.parseInt(scan.next());
-//        }catch (NumberFormatException e){
-//            System.out.println("Zły znak");
-//            throw e;
-//        }
-//
-        int[] tablica = {10, 20, 30, 40, 50};
-        Scanner sc = new Scanner(System.in);
+        String tab[] = {"Audi", "BMW", "Mercedes", "Lexus", "Porshe", "McLaren"};
+        Scanner scan= new Scanner(System.in);
+        int index = -1;
 
-        System.out.println("Który element tablicy wyświetlić?");
-        int index = sc.nextInt();
-        sc.close();
-        try {
-            System.out.println(tablica[index]);
-        } catch(ArrayIndexOutOfBoundsException e) {
-            System.err.println("Podałeś indeks wykraczający poza rozmiar tablicy!");
+        System.out.println("Podaj indeks tablicy [0-5], który ma być wyświetlony: ");
+
+        try{
+            index = Integer.parseInt(scan.next());
+        }catch (NumberFormatException e){
+            System.err.println("Zły znak");
+            throw e;
         }
+        try {
+            System.out.println(tab[index]);
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.err.println("Podałeś indeks wykraczający poza rozmiar tablicy");
+        }finally {
+            System.out.println("Koniec programu");
+        }
+
+
+
+
+
 
 
 
