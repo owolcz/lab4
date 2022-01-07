@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -21,6 +22,35 @@ public class Main {
            white(!isIndexCorrect) {}
         */
 
+//        Zad.1
+//        String tab[] = {"Audi", "BMW", "Mercedes", "Lexus", "Porshe", "McLaren"};
+//        Scanner scan= new Scanner(System.in);
+//        int index = -1;
+//
+//
+//
+//        System.out.println("Podaj indeks tablicy [0-5], który ma być wyświetlony: ");
+//
+//        try{
+//            index = Integer.parseInt(scan.next());
+//        }catch (NumberFormatException e){
+//            System.out.println("Zły znak");
+//            throw e;
+//        }
+//
+//        if(index<1 && index >=0) {
+//            try {
+//                System.out.println(tab[index]);
+//            } catch (ArrayIndexOutOfBoundsException e) {
+//                System.out.println("Błąd Podałeś index: " + index + ", dozwolone są od - do " + (tab.length - 1));
+//                throw e;
+//            } finally {
+//                System.out.println("Koniec programu");
+//            }
+//        }
+
+
+
 
 
         /* zad.2
@@ -29,5 +59,23 @@ public class Main {
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
 
+
+        try {
+            int result = 10 / 0;
+            System.out.print("a) Czy ten kod się wykona ?");
+            /* błąd arytmetyczny */
+            /* jeśli zostanie rzucony błąd klasy ArithmeticException, to zostanie wywołany kod z sekcji catch */
+        } catch (ArithmeticException e) {
+//            e.getMessage() - komunikat błedu
+            System.out.println("ArithmeticException " + e.getMessage()); // ArithmeticException / by zero
+        }
+
+        try {
+            String name = null;
+            name.toString();
+        } catch (NullPointerException e) {
+            System.out.println("Błąd nie można wywołać metody toString() na null");
+            throw e; // rzuca komunikat z klasy Exception
+        }
     }
 }
