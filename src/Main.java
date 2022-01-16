@@ -65,11 +65,9 @@ public class Main {
         try {
             int result = 10 / 0;
             System.out.print("a) Czy ten kod się wykona ?");
-            /* błąd arytmetyczny */
-            /* jeśli zostanie rzucony błąd klasy ArithmeticException, to zostanie wywołany kod z sekcji catch */
+
         } catch (ArithmeticException e) {
-//            e.getMessage() - komunikat błedu
-            System.out.println("ArithmeticException " + e.getMessage()); // ArithmeticException / by zero
+            System.out.println("ArithmeticException " + e.getMessage());
         }
 
         try {
@@ -77,7 +75,7 @@ public class Main {
             name.toString();
         } catch (NullPointerException e) {
             System.out.println("Błąd nie można wywołać metody toString() na null");
-            throw e; // rzuca komunikat z klasy Exception
+            throw e;
         }
     }
 }
