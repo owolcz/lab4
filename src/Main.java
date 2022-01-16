@@ -62,20 +62,42 @@ public class Main {
          */
 
 
-        try {
-            int result = 10 / 0;
-            System.out.print("a) Czy ten kod się wykona ?");
+//        try {
+//            int result = 10 / 0;
+//            System.out.print("a) Czy ten kod się wykona ?");
+//
+//        } catch (ArithmeticException e) {
+//            System.out.println("ArithmeticException " + e.getMessage());
+//        }
+//
+//        try {
+//            String name = null;
+//            name.toString();
+//        } catch (NullPointerException e) {
+//            System.out.println("Błąd nie można wywołać metody toString() na null");
+//            throw e;
+//        }
 
-        } catch (ArithmeticException e) {
-            System.out.println("ArithmeticException " + e.getMessage());
+        try {
+
+            System.out.println("Dzielenie 25/0");
+
+            //below code throws divide by zero exception
+            int data=25/0;
+            System.out.println(data);
         }
 
-        try {
-            String name = null;
-            name.toString();
-        } catch (NullPointerException e) {
-            System.out.println("Błąd nie można wywołać metody toString() na null");
-            throw e;
+        //handles the Arithmetic Exception / Divide by zero exception
+        catch(ArithmeticException e){
+            System.out.println("Nie dziel przez zero");
+            System.out.println(e);
+        }
+
+        //executes regardless of exception occured or not
+        finally {
+            System.out.println("polecenie finally zawsze sie wykona");
         }
     }
+
+
 }
