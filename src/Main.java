@@ -61,7 +61,7 @@ public class Main {
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
 
-
+        //Odkomentuj poniższy kod by srpawdzić działanie
 //        try {
 //            int result = 10 / 0;
 //            System.out.print("a) Czy ten kod się wykona ?");
